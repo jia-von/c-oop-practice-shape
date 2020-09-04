@@ -6,7 +6,8 @@ namespace C_OOP_Practice_Shape.Shapes
 {
     class Circle : Shape //Create a “Circle” class that inherits from Shape with the following properties:
     {
-        public double Circumference {
+        public double Circumference //Why can't I use perimeter
+        {
             get => 2 * Math.PI * Radius;
         } //Circumference (public getter only)
 
@@ -23,9 +24,5 @@ namespace C_OOP_Practice_Shape.Shapes
             Radius = radius;
             ShapeColour = colour;
         }
-        //public override string ToString()
-        //{
-        //    return $"The circumference of a circle is {Circumference}. ";
-        //}
     }
 }

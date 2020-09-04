@@ -26,9 +26,5 @@ namespace C_OOP_Practice_Shape.Shapes
             Width = width;
             ShapeColour = colour;
         }
-        //public override string ToString()
-        //{
-        //    return $"The perimeter of the triangle is {Perimeter}. ";
-        //}
     }
 }
