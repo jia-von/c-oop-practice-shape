@@ -5,7 +5,7 @@ using System.Text;
 using C_OOP_Practice_Shape.Shapes;
 namespace C_OOP_Practice_Shape
 {
-    class Draw
+    class Drawing 
     {
         public double SpaceCovered 
         { 
@@ -15,20 +15,19 @@ namespace C_OOP_Practice_Shape
 
         private List<Shape> ListShapes { get; set; }// ListShapes (private getter and setter), polymorphic list
 
-        public Draw()
+        public Drawing()
         {
             ListShapes = new List<Shape>();
         }
-        public Draw(Shape shape)    //Draw(Shape), which will accept a polymorphic argument and add that to the ListShapes list.
+        public Drawing(Shape shape)    //Draw(Shape), which will accept a polymorphic argument and add that to the ListShapes list.
         {
             ListShapes = new List<Shape>();
-            AddShape(shape);
+            Draw(shape);
         }
 
-        public void AddShape(Shape shape)
+        public void Draw(Shape shape)
         {
             ListShapes.Add(shape);
-
         }
 
         //A ToString() override, which will output “A drawing consisting of X shapes.” where X is the number of shapes in the polymorphic list.

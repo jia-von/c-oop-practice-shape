@@ -6,7 +6,7 @@ namespace C_OOP_Practice_Shape.Shapes
 {
     class Circle : Shape //Create a “Circle” class that inherits from Shape with the following properties:
     {
-        public double Circumference //Why can't I use perimeter
+        public double Perimeter
         {
             get => 2 * Math.PI * Radius;
         } //Circumference (public getter only)
