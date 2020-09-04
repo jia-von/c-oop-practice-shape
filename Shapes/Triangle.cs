@@ -8,33 +8,23 @@ namespace C_OOP_Practice_Shape.Shapes
     {
         public double Perimeter 
         {
-            get 
-            {
-                return Length + Width + Math.Sqrt(Math.Pow(Length, 2)+Math.Pow(Width, 2));
-            }
+            get => Length + Width + Math.Sqrt(Math.Pow(Length, 2)+Math.Pow(Width, 2)); //Research and implement getter arrow notation on the Perimeter / Area methods.
         } 
-        
         //Perimeter (public getter only)
         public override double Area 
         { 
-            get
-            {
-                return 0.5 * Length * Width;
-            }
+            get => 0.5 * Length * Width;
         } //Area (public getter only)
         private int Length { get; set; } //Length (private getter and setter)
         private int Width { get; set; } //Width (private getter and setter)
+        private Colour ShapeColour { get; set; }
 
         //Create constructors for all three shapes that require their private properties as arguments.
-        public Triangle()
-        {
-            Length = 0;
-            Width = 0;
-        }
-        public Triangle(int length, int width)
+        public Triangle(int length, int width, Colour colour)
         {
             Length = length;
             Width = width;
+            ShapeColour = colour;
         }
         public override string ToString()
         {

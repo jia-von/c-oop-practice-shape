@@ -7,25 +7,21 @@ namespace C_OOP_Practice_Shape.Shapes
     class Circle : Shape //Create a “Circle” class that inherits from Shape with the following properties:
     {
         public double Circumference {
-            get 
-            {
-                return 2 * Math.PI * Radius;
-            } 
+            get => 2 * Math.PI * Radius;
         } //Circumference (public getter only)
 
         public override double  Area 
         { 
-            get 
-            {
-                return Math.PI * Math.Pow(Radius, 2);
-            }
+            get => Math.PI * Math.Pow(Radius, 2);
         } //Area (public getter only)
         private int Radius { get; set; } //Radius (private getter and setter)
+        private Colour ShapeColour { get; set; }
 
         //Create constructors for all three shapes that require their private properties as arguments.
-        public Circle(int radius)
+        public Circle(int radius, Colour colour)
         {
             Radius = radius;
+            ShapeColour = colour;
         }
         public override string ToString()
         {
