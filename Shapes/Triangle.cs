@@ -6,7 +6,7 @@ namespace C_OOP_Practice_Shape.Shapes
 {
     class Triangle : Shape //Create a “Triangle” class that inherits from Shape with the following properties:
     {
-        public double Perimeter 
+        public override double Perimeter 
         {
             get => Length + Width + Math.Sqrt(Math.Pow(Length, 2)+Math.Pow(Width, 2)); //Research and implement getter arrow notation on the Perimeter / Area methods.
         } 

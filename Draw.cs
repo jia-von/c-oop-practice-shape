@@ -11,7 +11,7 @@ namespace C_OOP_Practice_Shape
         { 
             get => ListShapes.Sum(x => x.Area);
         } //SpaceCovered (public getter only), which will get the total area of all shapes drawn.
-        public double LinesDrawn { get; } //LinesDrawn (public getter only), which will get the total perimeter/circumference of all shapes drawn.
+        public double LinesDrawn { get => ListShapes.Sum(x => x.Perimeter); } //LinesDrawn (public getter only), which will get the total perimeter/circumference of all shapes drawn.
 
         private List<Shape> ListShapes { get; set; }// ListShapes (private getter and setter), polymorphic list
 
@@ -29,6 +29,7 @@ namespace C_OOP_Practice_Shape
         {
             ListShapes.Add(shape);
         }
+        
 
         //A ToString() override, which will output “A drawing consisting of X shapes.” where X is the number of shapes in the polymorphic list.
         public override string ToString()
