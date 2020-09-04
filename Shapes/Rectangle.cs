@@ -6,8 +6,19 @@ namespace C_OOP_Practice_Shape.Shapes
 {
     class Rectangle : Shape //Create a “Rectangle” class that inherits from Shape with the following properties
     {
-        public double Perimeter { get; } //Perimeter (public getter only)
-        //public double Area { get; } Area (public getter only)
+        public int Perimeter {
+            get 
+            { 
+                return (Length * 2) + (Width * 2);
+            } 
+        } //Perimeter (public getter only)
+        public override double Area 
+        { 
+            get
+            {
+                return Length * Width;
+            }
+        } //Area (public getter only)
         private int Length { get; set; } //Length (private getter and setter)
         private int Width { get; set; } //Width (private getter and setter)
 
@@ -18,5 +29,9 @@ namespace C_OOP_Practice_Shape.Shapes
             Width = width;
         }
 
+        public override string ToString()
+        {
+            return $"The perimeter of the Rectangle is {Perimeter}. ";
+        }
     }
 }

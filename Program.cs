@@ -6,7 +6,9 @@ namespace C_OOP_Practice_Shape
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Initial commit");
+            Draw drawing = new Draw(new Shapes.Circle(3));
+            Console.WriteLine(drawing.ToString());
+            
         }
     }
 }
