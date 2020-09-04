@@ -15,6 +15,7 @@ namespace C_OOP_Practice_Shape.Shapes
             Green
         }
         public abstract double Area { get; }
+        public abstract Colour ShapeColour { get; }
 
     }
 }

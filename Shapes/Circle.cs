@@ -15,7 +15,7 @@ namespace C_OOP_Practice_Shape.Shapes
             get => Math.PI * Math.Pow(Radius, 2);
         } //Area (public getter only)
         private int Radius { get; set; } //Radius (private getter and setter)
-        private Colour ShapeColour { get; set; }
+        public override Colour ShapeColour { get; }
 
         //Create constructors for all three shapes that require their private properties as arguments.
         public Circle(int radius, Colour colour)
@@ -23,9 +23,9 @@ namespace C_OOP_Practice_Shape.Shapes
             Radius = radius;
             ShapeColour = colour;
         }
-        public override string ToString()
-        {
-            return $"The circumference of a circle is {Circumference}. ";
-        }
+        //public override string ToString()
+        //{
+        //    return $"The circumference of a circle is {Circumference}. ";
+        //}
     }
 }

@@ -37,7 +37,7 @@ namespace C_OOP_Practice_Shape
         //A ToString() override, which will output “A drawing consisting of X shapes.” where X is the number of shapes in the polymorphic list.
         public override string ToString()
         {
-            return $"A drawing consisting of {ListShapes.Count()} shapes that is AA.AA % red, BB.BB % green and CC.CC % blue. Total area is {SpaceCovered}";
+            return $"A drawing consisting of {ListShapes.Count()} shapes that is {Math.Round((ListShapes.FindAll(x => x.ShapeColour == Shapes.Shape.Colour.Red).Sum(y => y.Area)/SpaceCovered)*100, 2)} % red, {Math.Round((ListShapes.FindAll(x => x.ShapeColour == Shapes.Shape.Colour.Green).Sum(y => y.Area) / SpaceCovered)*100, 2)} % green and {Math.Round((ListShapes.FindAll(x => x.ShapeColour == Shapes.Shape.Colour.Blue).Sum(y => y.Area) / SpaceCovered)*100, 2)} % blue.";
         }
 
     }

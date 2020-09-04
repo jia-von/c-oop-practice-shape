@@ -15,7 +15,7 @@ namespace C_OOP_Practice_Shape.Shapes
         } //Area (public getter only)
         private int Length { get; set; } //Length (private getter and setter)
         private int Width { get; set; } //Width (private getter and setter)
-        private Colour ShapeColour { get; set; }
+        public override Colour ShapeColour { get; }
 
         //Create constructors for all three shapes that require their private properties as arguments.
         public Rectangle(int length, int width, Colour colour)
@@ -25,9 +25,9 @@ namespace C_OOP_Practice_Shape.Shapes
             ShapeColour = colour;
         }
 
-        public override string ToString()
-        {
-            return $"The perimeter of the Rectangle is {Perimeter}. ";
-        }
+        //public override string ToString()
+        //{
+        //    return $"The perimeter of the Rectangle is {Perimeter}. ";
+        //}
     }
 }
